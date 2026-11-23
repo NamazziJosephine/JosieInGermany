@@ -6,7 +6,7 @@ A small, responsive multi-page website with practical basics for international a
 
 **Live site:** https://delightful-monstera-da682a.netlify.app/
 
-> Replace the link above with your Netlify address.
+Github pages: https://namazzijosephine.github.io/JosieInGermany/
 
 ---
 
