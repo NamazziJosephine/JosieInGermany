@@ -1,0 +1,100 @@
+/* =====================================================
+   style.css  –  shared by ALL pages of the site.
+   Why one file? Change a colour here once and every page updates.
+   It is linked AFTER Bootstrap, so our rules override Bootstrap's.
+   ===================================================== */
+
+/* CSS variables: define each colour once, reuse with var(--name). */
+:root {
+  --navy: #0f766e;
+  --navy-dark: #152b47;
+  --amber: #f5a524;
+  --cream: #fdf8ef;
+  --ink: #1f2937;
+}
+
+body {
+  color: var(--ink);
+  background: var(--cream);
+}
+
+/* ---------- Navbar ---------- */
+.navbar-brand { color: var(--navy) !important; font-weight: 700; }
+.nav-link.active { color: var(--navy) !important; font-weight: 600; }
+
+/* ---------- Buttons: our own colour instead of Bootstrap blue ---------- */
+.btn-amber {
+  background: var(--amber);
+  border-color: var(--amber);
+  color: var(--navy-dark);
+  font-weight: 600;
+}
+.btn-amber:hover {
+  background: #e0951a;
+  border-color: #e0951a;
+  color: var(--navy-dark);
+}
+
+/* ---------- Hero (home page) and page header (other pages) ---------- */
+.hero {
+  background: linear-gradient(135deg, var(--navy), var(--navy-dark));
+  color: #fff;
+}
+.page-header {
+  background: linear-gradient(135deg, var(--navy), var(--navy-dark));
+  color: #fff;
+}
+.hero .lead, .page-header .lead { color: rgba(255, 255, 255, .8); }
+
+/* ---------- Topic cards on the home page ---------- */
+.topic-card {
+  border: 0;
+  border-radius: 1rem;
+  transition: transform .2s ease, box-shadow .2s ease; /* smooth hover animation */
+}
+.topic-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 .75rem 1.5rem rgba(30, 58, 95, .18);
+}
+.topic-icon {
+  width: 3.25rem;
+  height: 3.25rem;
+  display: grid;
+  place-items: center;          /* centres the emoji horizontally AND vertically */
+  border-radius: 50%;
+  background: #fff3d6;
+  font-size: 1.5rem;
+}
+
+/* ---------- Numbered steps ---------- */
+.step-number {
+  width: 2.5rem;
+  height: 2.5rem;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--navy);
+  color: #fff;
+  font-weight: 700;
+}
+
+/* ---------- Image slot: shown until you add your own photo ---------- */
+.image-slot {
+  min-height: 220px;
+  border: 2px dashed #c9d3e0;
+  border-radius: 1rem;
+  background: #eef2f7;
+  color: #64748b;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  padding: 1rem;
+}
+
+/* ---------- Footer ---------- */
+.site-footer {
+  background: var(--navy-dark);
+  color: #fff;
+}
+.site-footer a { color: rgba(255, 255, 255, .8); }
+.site-footer a:hover { color: var(--amber); }

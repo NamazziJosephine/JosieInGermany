@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <!-- Viewport tag: makes phones use their real screen width (needed for responsive design) -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Student Life in Germany – A Practical Starter Guide</title>
+  <meta name="description" content="A student-made guide to registering, housing, money and work when you study in Germany.">
+
+  <!-- CDN: Bootstrap's CSS is loaded from jsDelivr's servers -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+  <!-- Our own CSS comes AFTER Bootstrap so it can override it -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+  <!-- ===== NAVBAR (the same block is copied into every page) =====
+       A plain HTML site has no "include" feature, so we repeat the
+       navbar on each page. Only the "active" class changes per page. -->
+  <nav class="navbar navbar-expand-md bg-white shadow-sm sticky-top">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">🎓 Josie in Germany</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+              data-bs-target="#mainNav" aria-controls="mainNav"
+              aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="arriving.html">Arriving</a></li>
+          <li class="nav-item"><a class="nav-link" href="housing.html">Housing</a></li>
+          <li class="nav-item"><a class="nav-link" href="money.html">Money &amp; Work</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ===== HERO =====
+       Two columns: text (col-lg-7) + checklist card (col-lg-5).
+       7 + 5 = 12 units. Below 992px they stack, text first. -->
+  <header class="hero py-5">
+    <div class="container py-lg-4">
+      <!-- g-4 g-lg-5: a big gutter (g-5) on a phone makes the row wider than
+           the screen and causes sideways scrolling, so we only use it from lg up. -->
+      <div class="row align-items-center g-4 g-lg-5">
+
+        <div class="col-lg-7">
+          <span class="badge rounded-pill text-bg-warning mb-3">Written by a student, for students</span>
+          <h1 class="display-4 fw-bold">Finding your feet while studying in Germany.</h1>
+          <p class="lead mb-4">
+            Registering your address, finding a room, opening a bank account,
+            working next to your studies. The practical basics, explained simply.
+          </p>
+          <!-- d-grid on phones = full-width buttons; d-sm-flex = side by side from 576px up -->
+          <div class="d-grid d-sm-flex gap-2">
+            <a href="arriving.html" class="btn btn-amber btn-lg px-4">Start here</a>
+            <a href="#first-steps" class="btn btn-outline-light btn-lg px-4">See the first steps</a>
+          </div>
+        </div>
+
+        <div class="col-lg-5">
+          <div class="card border-0 shadow rounded-4">
+            <div class="card-body p-4">
+              <h2 class="h5 fw-bold mb-3">Your quick checklist</h2>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">☐ Health insurance sorted</li>
+                <li class="list-group-item">☐ Address registered (Anmeldung)</li>
+                <li class="list-group-item">☐ Bank account opened</li>
+                <li class="list-group-item">☐ Enrolled and student card received</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ===== TOPIC CARDS =====
+         col-12 col-md-4: 1 card per row on phones, 3 per row from 768px up.
+         h-100 on the card makes all cards the same height. -->
+    <section class="py-5">
+      <div class="container">
+        <h2 class="fw-bold mb-1">What do you need help with?</h2>
+        <p class="text-secondary mb-4">Pick a topic to get started.</p>
+
+        <div class="row g-4">
+
+          <div class="col-12 col-md-4">
+            <div class="card topic-card h-100 shadow-sm">
+              <div class="card-body p-4">
+                <div class="topic-icon mb-3">📋</div>
+                <h3 class="h5 fw-bold">Arriving</h3>
+                <p class="text-secondary">Address registration, residence permits and enrolling at your university.</p>
+                <a href="arriving.html" class="stretched-link fw-semibold">Read more →</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-md-4">
+            <div class="card topic-card h-100 shadow-sm">
+              <div class="card-body p-4">
+                <div class="topic-icon mb-3">🏠</div>
+                <h3 class="h5 fw-bold">Housing</h3>
+                <p class="text-secondary">Student residence, shared flat or your own place, and how to avoid scams.</p>
+                <a href="housing.html" class="stretched-link fw-semibold">Read more →</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-md-4">
+            <div class="card topic-card h-100 shadow-sm">
+              <div class="card-body p-4">
+                <div class="topic-icon mb-3">💶</div>
+                <h3 class="h5 fw-bold">Money &amp; Work</h3>
+                <p class="text-secondary">Insurance, banking, transport tickets and working next to your studies.</p>
+                <a href="money.html" class="stretched-link fw-semibold">Read more →</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== FIRST STEPS =====
+         col-12 col-sm-6 col-lg-3:
+           phones: 1 per row | 576px+: 2 per row (6/12) | 992px+: 4 per row (3/12) -->
+    <section id="first-steps" class="py-5 bg-white">
+      <div class="container">
+        <h2 class="fw-bold mb-1">A typical order for your first weeks</h2>
+        <p class="text-secondary mb-4">Your university may do things in a slightly different order. Always check with its International Office.</p>
+
+        <div class="row g-4">
+
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="step-number mb-3">1</div>
+            <h3 class="h6 fw-bold">Arrange health insurance</h3>
+            <p class="text-secondary small mb-0">You usually need proof of it to enrol.</p>
+          </div>
+
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="step-number mb-3">2</div>
+            <h3 class="h6 fw-bold">Register your address</h3>
+            <p class="text-secondary small mb-0">At the local registration office, soon after moving in.</p>
+          </div>
+
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="step-number mb-3">3</div>
+            <h3 class="h6 fw-bold">Open a bank account</h3>
+            <p class="text-secondary small mb-0">For rent, tuition-related fees and a salary if you work.</p>
+          </div>
+
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="step-number mb-3">4</div>
+            <h3 class="h6 fw-bold">Enrol and get your student card</h3>
+            <p class="text-secondary small mb-0">It also works as your semester ticket at many universities.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== IMAGE SLOT + NOTE =====
+         To use your own photo, replace the .image-slot div with:
+         <img src="images/your-photo.jpg" class="img-fluid rounded-4" alt="Describe the photo">
+         (img-fluid = never wider than its column, so it stays responsive.) -->
+    <section class="py-5">
+      <div class="container">
+        <div class="row align-items-center g-4">
+          <div class="col-md-6">
+            <div class="image-slot">📷 Add your own photo here<br><small>(see the comment in index.html)</small></div>
+          </div>
+          <div class="col-md-6">
+            <h2 class="fw-bold">A guide, not official advice</h2>
+            <p class="text-secondary">
+              Rules about visas, insurance and work change, and they differ by
+              country of origin and by city. Use this site to understand the
+              basics, then confirm the details with official sources such as
+              your university, the <a href="https://www.daad.de/en/" target="_blank" rel="noopener">DAAD</a>
+              or <a href="https://www.make-it-in-germany.com/en/" target="_blank" rel="noopener">Make it in Germany</a>.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== FOOTER: 3 columns on md+, stacked on phones ===== -->
+  <footer class="site-footer py-5">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-md-4">
+          <h3 class="h5">🎓 Josie in Germany</h3>
+          <p class="mb-0 text-white-50">A student project for learning web design.</p>
+        </div>
+        <div class="col-md-4">
+          <h3 class="h5">Pages</h3>
+          <ul class="list-unstyled mb-0">
+            <li><a href="arriving.html">Arriving</a></li>
+            <li><a href="housing.html">Housing</a></li>
+            <li><a href="money.html">Money &amp; Work</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4">
+          <h3 class="h5">Official sources</h3>
+          <ul class="list-unstyled mb-0">
+            <li><a href="https://www.daad.de/en/" target="_blank" rel="noopener">DAAD</a></li>
+            <li><a href="https://www.make-it-in-germany.com/en/" target="_blank" rel="noopener">Make it in Germany</a></li>
+          </ul>
+        </div>
+      </div>
+      <hr class="border-secondary my-4">
+      <small class="text-white-50">© 2026 Josie in Germany. General information only, not legal advice.</small>
+    </div>
+  </footer>
+
+  <!-- Bootstrap's JavaScript (from the CDN): makes the hamburger menu work -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
